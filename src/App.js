@@ -97,6 +97,17 @@ function App() {
 
       <table className="table container">
         <thead>
+          {items.map((d, index) => {
+            if (index === 1) {
+              return (
+                <tr key={index}>
+                  {Object.keys(d).map((chave, index) => {
+                    return <th scope="col">{chave}</th>
+                  })}
+                </tr>
+              )
+            }
+          })}
           <tr>
             <th scope="col">A</th>
             <th scope="col">B</th>
