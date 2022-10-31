@@ -1,41 +1,15 @@
 import React, { useState } from "react"
 import "./App.css"
 import * as XLSX from "xlsx"
-import Moment from "moment"
+// import Moment from "moment"
 
 function App() {
   const [items, setItems] = useState([])
 
-  function ExcelDateToJSDate(serial) {
-    var utc_days = Math.floor(serial - 25569)
-    var utc_value = utc_days * 86400
-    var date_info = new Date(utc_value * 1000)
-
-    var fractional_day = serial - Math.floor(serial) + 0.0000001
-
-    var total_seconds = Math.floor(86400 * fractional_day)
-
-    var seconds = total_seconds % 60
-
-    total_seconds -= seconds
-
-    var hours = Math.floor(total_seconds / (60 * 60))
-    var minutes = Math.floor(total_seconds / 60) % 60
-
-    return new Date(
-      date_info.getFullYear(),
-      date_info.getMonth(),
-      date_info.getDate(),
-      hours,
-      minutes,
-      seconds
-    )
-  }
-
-  const dataHora = (dt) => {
-    const xpto = new Date(Math.round((dt - 25568) * 86400 * 1000))
-    return Moment(xpto).format("DD/MM/YYYY")
-  }
+  // const dataHora = (dt) => {
+  //   const xpto = new Date(Math.round((dt - 25568) * 86400 * 1000))
+  //   return Moment(xpto).format("DD/MM/YYYY")
+  // }
 
   const readExcel = (file) => {
     const promise = new Promise((resolve, reject) => {
