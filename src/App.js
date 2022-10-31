@@ -97,28 +97,24 @@ function App() {
 
       <table className="table container">
         <thead>
-          {items.map((d, index) => {
-            if (index === 1) {
+          {items.map((d, i) => {
+            if (i === 1) {
               return (
-                <tr key={index}>
-                  {Object.keys(d).map((chave, index) => {
-                    return <th scope="col">{chave}</th>
+                <tr key={i}>
+                  {Object.keys(d).map((chave, indx) => {
+                    return (
+                      <th scope="col" key={indx}>
+                        {chave}
+                      </th>
+                    )
                   })}
                 </tr>
               )
             }
           })}
-          <tr>
-            <th scope="col">A</th>
-            <th scope="col">B</th>
-            <th scope="col">C</th>
-            <th scope="col">D</th>
-            <th scope="col">E</th>
-            <th scope="col">F</th>
-          </tr>
         </thead>
         <tbody>
-          {items.map((d, index) => (
+          {/* {items.map((d, index) => (
             <tr key={index}>
               <th>{dataHora(d.A)}</th>
               <th>{d.B}</th>
@@ -127,7 +123,20 @@ function App() {
               <th>{d.E}</th>
               <th>{d.F}</th>
             </tr>
-          ))}
+          ))} */}
+          {items.map((d, i) => {
+            return (
+              <tr key={i}>
+                {Object.values(d).map((chave, indx) => {
+                  return (
+                    <th scope="col" key={indx}>
+                      {chave}
+                    </th>
+                  )
+                })}
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
