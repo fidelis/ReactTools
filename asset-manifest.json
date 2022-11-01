@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "https://fidelis.github.io/Reacttools/static/css/main.073c9b0a.css",
+    "main.js": "https://fidelis.github.io/Reacttools/static/js/main.9e61df2f.js",
+    "index.html": "https://fidelis.github.io/Reacttools/index.html",
+    "main.073c9b0a.css.map": "https://fidelis.github.io/Reacttools/static/css/main.073c9b0a.css.map",
+    "main.9e61df2f.js.map": "https://fidelis.github.io/Reacttools/static/js/main.9e61df2f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.9e61df2f.js"
+  ]
+}
